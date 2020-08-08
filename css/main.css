@@ -1,0 +1,179 @@
+:root {
+    --main-color-yellow: #F4DD6D;
+    --main-background: #2B2B2B;
+    --main-text-color: #fff;
+    --main-link-purple: #db36a4;
+    --main-background-box: #303030;
+    --main-yellow-lighter: #f1e8c0;
+    font-size: 60%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+}
+
+body {
+    background: var(--main-background);
+    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 500 1.6rem Poppins;
+}
+
+html,
+body{
+    height: 100vh;
+}
+
+.container {
+    width: 90vw; /* width = largura */
+    max-width: 700px;
+}
+
+.container header nav li{
+    list-style: none;
+    display: inline-flex;   
+    margin: auto 3rem;
+}
+
+
+.profile-container {
+    text-align: center;
+}
+
+.profile-container img {
+    margin-top: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+
+.about-me h2,
+.contact h2 {
+    background: var(--main-color-yellow);
+    color: var(--main-background);
+    padding: 1rem;
+    border-radius: 2rem 0.3rem 2rem;
+    margin: 20px auto;
+    font-size: 2.1rem;
+}
+
+.about-me h2 i,
+.contact h2 i {
+    margin: auto 1rem;
+}
+
+.contact li {
+    list-style: none;
+    background-color: var(--main-background-box);
+    margin: 1rem 0;
+    padding: .8rem;
+    text-align: center;
+    font: 700 1.4rem Archivo;
+    border-radius: .6rem;
+    transition: background .8s;
+}
+
+.contact li:hover {
+    background: var(--main-yellow-lighter);
+    
+}
+
+.tools {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.tools li{
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 4rem;
+}
+
+.tools li:first-child {
+    margin-left: auto;
+}
+
+.tools li:last-child {
+    margin-right: auto;
+}
+
+
+.contact li a, 
+.tools li a {
+    color: var(--main-link-purple);
+    text-decoration: none;
+    font:1.4rem;
+    cursor: help;
+}
+
+.contact li a:hover, 
+.tools li a:hover {
+    color: var(--main-link-purple);
+}
+
+.about-me p,
+.tools p {
+    font: 400 1.5rem Archivo;
+    line-height: 2.1rem;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%; /* todo 1rem vai ser relativo a 10px */
+    }
+}
+
+@media (min-width: 1100px) {
+    .container {
+        max-width:  1100px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+            "profile about skills"
+            "footer footer footer";
+        column-gap: 40px;
+        row-gap: 50px;
+    }
+
+        .profile-container {
+        grid-area: profile;
+        text-align: initial;
+        align-self: center;
+        margin: 0;
+    }
+
+    .profile-container img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-me {
+        grid-area: about;
+    }
+
+    .about-me h3 {
+        font-size: 3rem;
+    }
+
+    .about-me h2,
+    .contact h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact {
+        grid-area: skills;
+    }
+
+   .tools {
+       grid-area: footer;
+       font-size: 1.3rem;
+   }
+
+}
