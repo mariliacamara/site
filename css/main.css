@@ -19,9 +19,6 @@
 body {
     background: var(--main-background);
     color: var(--main-text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font: 500 1.6rem Poppins;
 }
 
@@ -30,15 +27,36 @@ body{
     height: 100vh;
 }
 
-.container {
+.container,
+header {
     width: 90vw; /* width = largura */
     max-width: 700px;
+    margin: 0 auto;
 }
 
-.container header nav li{
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+header nav li{
     list-style: none;
-    display: inline-flex;   
-    margin: auto 3rem;
+    display: inline-flex;  
+    margin: 5rem 3rem;
+}
+
+header nav li:hover {
+    margin-top: -20px;
+}
+
+header nav li a{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+header nav li a:hover{
+    color: var(--main-color-yellow);
 }
 
 
@@ -47,7 +65,7 @@ body{
 }
 
 .profile-container img {
-    margin-top: 30rem;
+    margin-top: 5rem;
     height: 30rem;
     border-radius: 50%;
 }
@@ -83,15 +101,20 @@ body{
     
 }
 
-.tools {
-    margin: 2rem auto;
+.tools,
+.highlight-projects {
+    margin: 4rem auto;
     text-align: center;
+}
+
+.tools ul {
+    margin-top: 3rem;
 }
 
 .tools li{
     display: inline-block;
-    margin: 0 2rem;
-    font-size: 4rem;
+    margin: 2rem 1rem 0 1rem;
+    font-size: 2rem;
 }
 
 .tools li:first-child {
@@ -122,6 +145,46 @@ body{
     line-height: 2.1rem;
 }
 
+.highlight-projects {
+    margin: 4rem auto ;
+}
+
+.highlight-title {
+    margin-bottom: 3.2rem;
+}
+
+.projects {
+    width: 100%;
+    display: block; 
+    text-align: left;
+    border: 1px solid #eee;  
+    border-radius: .8rem;
+}
+
+.projects + .projects {
+    margin-top: 2rem;
+}
+
+.projects img {
+    width: 100%;
+    border-radius: .8rem .8rem 0 0;
+}
+
+.projects-info {
+    margin: 1rem 2rem;
+}
+
+.projects-info a {
+    margin-top: 1rem;
+    color: var(--main-yellow-lighter);
+    display: inline-flex;
+    margin-right: 1rem;
+}
+
+.projects-info a:hover {
+    color: var(--main-link-purple);
+}
+
 @media (min-width: 700px) {
     :root {
         font-size: 62.5%; /* todo 1rem vai ser relativo a 10px */
@@ -136,16 +199,21 @@ body{
         grid-template-rows: 350px 1fr;
         grid-template-areas: 
             "profile about skills"
-            "footer footer footer";
+            "features features features"
+            "projs projs projs";
         column-gap: 40px;
         row-gap: 50px;
     }
 
-        .profile-container {
-        grid-area: profile;
-        text-align: initial;
-        align-self: center;
-        margin: 0;
+    header {
+        max-width: 1100px;
+    }
+
+    .profile-container {
+       grid-area: profile;
+       text-align: initial;
+       align-self: center;
+       margin: 0;
     }
 
     .profile-container img {
@@ -172,8 +240,29 @@ body{
     }
 
    .tools {
-       grid-area: footer;
+       grid-area: features;
        font-size: 1.3rem;
+       margin: 0 auto;
    }
 
+   .tools li{
+    display: inline-block;
+    margin: auto 2rem;
+    font-size: 5rem;
+   }
+
+   .highlight-projects {
+    grid-area: projs;
+    margin: 0 0 6rem 0;
+    font-size: 1.3rem;
+   }
+
+   .projects {
+        display: inline-block;
+        width: 32.5%;
+    }
+
+    .projects + .projects {
+        margin-left: 5px;
+    }
 }
