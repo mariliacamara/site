@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function (translating) {
       toolsTitle: "Tools and Features",
       toolsP: "Some tools and features I use for my projects.",
       projectTitle: "Highlight Projects",
-      projectP: "Alguns dos principais projetos que trabalhei",
+      projectP: "These are some of the projects I've worked",
       projectLink: "Visit",
       projectCode: "Code"
     },
@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function (translating) {
   // if it's portuguese it shows the content in portuguese
   // else... for any other language it shows the page in english
 
-  if (/^en\b/.test(navigator.language)) {
+  if (/^pt\b/.test(navigator.language)) {
     // How to show it
     // id.textContent = language.pt.aboutTitle
   
