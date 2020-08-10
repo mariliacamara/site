@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="pt-br">
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="An Information Systems student based in Rio de Janeiro mainly interested about everything Javascript, UI/UX and accessibility.">
+	<title>Marília Câmara</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/rotanting-text.css">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
-		rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" defer></script>
 	<script src="js/rotating-text.js" defer></script>
-	<script src="/js/translating.js" defer></script>
+	<script src="js/translating.js" defer></script>
+	
+
 </head>
 
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="portfolio">Portfolio</a></li> /
+				<li><a href="portfolio">Portfolio</a></li> 
 				<li><a href="https://blog.mariliacamara.com" target="_black">Blog</a></li>
 			</ul>
 		</nav>
@@ -34,11 +35,10 @@
 		</div>
 
 		<div class="about-me">
-			<h2 class="en"><i class="fas fa-user-alt"></i> About me</h2>
-			<h2 class="pt"><i class="fas fa-user-alt"></i> Sobre mim</h2>
+			<h2 id="aboutTitle"><i class="fas fa-user-alt"></i> Testando</h2>
 
 			<section class="cd-intro">
-				<h4 class="cd-headline clip is-full-width">
+				<h3 class="cd-headline clip is-full-width">
 					<span class="cd-words-wrapper">
 						<b class="is-visible">Hello,</b>
 						<b>Olá,</b>
@@ -46,43 +46,32 @@
 						<b>Bonjour,</b>
 						<b>Ciao,</b>
 					</span>
-				</h4>
+				</h3>
 			</section>
-			<p class="en">
+			<p id="aboutDescription">
 				I'm a 27 years old brazilian based in Rio de Janeiro, Brazil. 
 				An Information System student in the process to become an front-end developer
 				and currently learning all about Javascript and looking for freelance jobs and a remote internship. 	
 			</p>
-			<p class="pt">
-				Paraense de alma carioca. Estou caminhando para me tornar uma desenvolvedora front-end.
-				Sou graduanda de Sistemas da Informação pela Universidade Estácio de Sá.
-				Atualmente estou estudando por conta própria o máximo sobre Javascript e além de realizar outros cursos. Estou a procura de trabalhos
-				como freelancer e também uma oportunidade de estágio.
-			</p>
 		</div>
 
 		<div class="contact">
-			<h2 class="en"><i class="fas fa-id-card"></i> Contact</h2>
-			<h2 class="pt"><i class="fas fa-id-card"></i> Contato</h2>
+			<h2 id="contactTitle"><i class="fas fa-id-card"></i> Contact</h2>
 			<ul>
-				<li><a href="https://github.com/mariliacamara" target="_blank" refer="noopener noreferrer">Github</a>
+				<li><a href="https://github.com/mariliacamara" target="_blank" rel="noopener noreferrer">Github</a>
 				</li>
-				<li><a href="https://github.com/mariliacamara" target="_blank" refer="noopener noreferrer">Codepen</a>
+				<li><a href="https://github.com/mariliacamara" target="_blank" rel="noopener noreferrer">Codepen</a>
 				</li>
-				<li><a href="https://linkedin.com/in/mariliacamara" target="_blank"
-						refer="noopener noreferrer">LinkedIn</a></li>
-				<li><a href="mailto:mariliacamara.dev@gmail.com" target="_blank" refer="noopener noreferrer">Email</a>
+				<li><a href="https://linkedin.com/in/mariliacamara" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+				<li><a href="mailto:mariliacamara.dev@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
 				</li>
-				<li><a href="http://twitter.com/mariliacmr" target="_blank" refer="noopener noreferrer">Twitter</a></li>
+				<li><a href="http://twitter.com/mariliacmr" target="_blank" rel="noopener noreferrer">Twitter</a></li>
 			</ul>
 		</div>
 
 		<div class="tools">
-			<h2 class="en">Tools and Features</h2>
-			<h2 class="pt">Ferramentas & Recursos</h2>
-			<p class="en">Some tools and features I use for my projects.</p>
-			<p class="pt">Algumas ferramentas e recursos que utilizo durante meus projetos.</p>
-
+			<h2 id="toolsTitle">Tools and Features</h2>
+			<p id="toolsP">Some tools and features I use for my projects.</p>
 			<ul>
 				<li><i class="fab fa-html5"></i>
 					<p>HTML</p>
@@ -107,11 +96,8 @@
 
 		<div class="highlight-projects">
 			<div class="highlight-title">
-				<h2 class="en">Highlight Projects</h2>
-				<h2 class="pt">Projetos em destaque</h2>
-				<p class="en">These are some of the projects I've worked</p>
-				<p class="pt">Alguns dos principais projetos que trabalhei</p>
-
+				<h2 id="projectTitle">Highlight Projects</h2>
+				<p id="projectP">These are some of the projects I've worked</p>
 			</div>
 
 			<div class="projects">
@@ -119,12 +105,14 @@
 				<div class="projects-info">
 					<h3>Lucy Foster</h3>
 				<p>HTML, CSS, Javascript, PHP, Wordpress & Bootstrap</p>
-				<a class="en" href="https://lucyfoster.com.br" target="_blank" refer="noopener noreferrer">Visit</a>  <a class="en" href="https://lucyfoster.com.br" target="_blank" refer="noopener noreferrer">Code</a>
-				<a class="pt" href="https://lucyfoster.com.br" target="_blank" refer="noopener noreferrer">Visite</a>  <a class="pt" href="https://lucyfoster.com.br" target="_blank" refer="noopener noreferrer">Código</a>
+				<a id="projectLink" href="https://lucyfoster.com.br" target="_blank" rel="noopener noreferrer">Visit</a> 
+				<a id="projectCode" href="https://lucyfoster.com.br" target="_blank" rel="noopener noreferrer">Code</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	
 </body>
 
 </html>
